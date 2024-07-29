@@ -19,7 +19,7 @@ class Pizza(name: String, price: Double) : Food(name, price) {
 
 class Pasta(name: String, price: Double) : Food(name, price) {
     override fun cook(): String {
-        return "Hervir a 100°C hasta que tenga buena consistencia."
+        return "Cocinar la pasta."
     }
 }
 
