@@ -17,6 +17,12 @@ class Pizza(name: String, price: Double) : Food(name, price) {
     }
 }
 
+class Pasta(name: String, price: Double) : Food(name, price) {
+    override fun cook(): String {
+        return "Hervir a 100°C hasta que tenga buena consistencia."
+    }
+}
+
 // Inciso 3. Interfaz llamada Dessert con función eat
 interface Dessert {
     fun eat(): String
@@ -61,12 +67,14 @@ fun main() {
     val pizza = Pizza("Margarita", 8.99)
     val iceCream = IceCream("Chocolate", 3.99)
     val juice = Juice("Arándano", 2.99)
+    val pasta = Pasta("Alfredo", 6.99)
 
     // I8
     println(burger.cook())
     println(pizza.cook())
     println(iceCream.cook())
     println(juice.cook())
+    println(pasta.cook())
     println("")
 
     // I9
@@ -75,4 +83,5 @@ fun main() {
 
     // I10
     println("El precio con descuento de la hamburguesa es: ${burger.discountedPrice(10.0)}")
+    println("El precio con descuento de la pasta es: ${pasta.discountedPrice(40.0)}")
 }
